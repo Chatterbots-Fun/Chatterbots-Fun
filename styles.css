@@ -64,6 +64,9 @@ body {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .bot-card:hover {
     transform: translateY(-5px) scale(1.05);
@@ -86,11 +89,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 20px;
     border-radius: 12px;
     opacity: 0;
@@ -98,9 +102,9 @@ body {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
-/* When clicked, show the overlay and fade image */
+/* When clicked, show overlay */
 .bot-card.active img {
-    opacity: 0.3;
+    opacity: 0.4;
 }
 .bot-card.active .bot-overlay {
     opacity: 1;
@@ -115,7 +119,7 @@ body {
     margin-top: 10px;
 }
 
-/* CTA Buttons */
+/* CTA Button (Always Visible) */
 .cta-button {
     background: linear-gradient(90deg, #ff6f42, #f76c2f);
     color: white;
@@ -126,10 +130,7 @@ body {
     cursor: pointer;
     margin-top: 15px;
     transition: background 0.3s ease-in-out, transform 0.2s;
-    display: none;
-}
-.bot-card.active .cta-button {
-    display: block;
+    display: block; /* Button is always visible */
 }
 .cta-button:hover {
     background: linear-gradient(90deg, #f76c2f, #ff6f42);
