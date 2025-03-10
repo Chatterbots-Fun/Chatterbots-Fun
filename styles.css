@@ -5,8 +5,8 @@ html { scroll-behavior: smooth; }
 body {
     font-family: 'Inter', sans-serif;
     text-align: center;
-    background: #1e1e1e;
-    color: white;
+    background: #f76c2f; /* ORANGE BACKGROUND */
+    color: #222; /* Dark Text for Readability */
     padding: 40px;
     margin: 0;
 }
@@ -23,11 +23,11 @@ body {
 .hero h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.8rem;
-    color: #f76c2f;
+    color: white;
 }
 .hero p {
     font-size: 1.2rem;
-    color: #ddd;
+    color: #f8f8f8;
 }
 
 /* Bot Grid */
@@ -42,22 +42,21 @@ body {
 
 /* Bot Cards */
 .bot-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: #f8f8f8; /* Light Cards for Contrast */
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(247, 108, 47, 0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
 }
 .bot-card:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0px 10px 25px rgba(247, 108, 47, 0.4);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* CTA Buttons */
 .cta-button {
-    background: linear-gradient(90deg, #ff6f42, #f76c2f);
+    background: linear-gradient(90deg, #ff6f42, #f76c2f); /* Orange-Red Gradient */
     color: white;
     border: none;
     padding: 12px 18px;
@@ -76,12 +75,12 @@ body {
 footer {
     margin-top: 40px;
     font-size: 1rem;
-    color: #bbb;
+    color: white;
 }
 
 /* Powered by Poe */
 .powered-by {
     font-size: 0.9rem;
-    color: #bbb;
+    color: #f8f8f8;
     margin-top: 10px;
 }
