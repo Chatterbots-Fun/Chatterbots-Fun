@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;700&display=swap');
+
+/* General Styling */
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background: #1e1e1e;
+    color: white;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Logo Styling */
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 64, 129, 0.6);
+}
+
+/* Bot Grid */
+.bot-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Bot Cards */
+.bot-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(255, 64, 129, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bot-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 10px 25px rgba(255, 64, 129, 0.4);
+}
+
+/* Bot Images */
+img {
+    width: 100%;
+    border-radius: 12px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.bot-card:hover img {
+    opacity: 0.9;
+}
+
+/* Bot Name */
+.bot-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+}
+
+/* CTA Buttons */
+.cta-button {
+    background: linear-gradient(90deg, #ff4081, #3A86FF);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: linear-gradient(90deg, #3A86FF, #ff4081);
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Powered by Poe */
+.powered-by {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 10px;
+}
