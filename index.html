@@ -18,17 +18,15 @@
         }
         window.onload = typeWriter;
 
-        // Reveal Description on Click
-        function toggleDescription(id) {
-            const desc = document.getElementById(id);
-            const btn = desc.nextElementSibling;
-            if (desc.style.display === "none") {
-                desc.style.display = "block";
-                btn.style.display = "inline-block";
-            } else {
-                desc.style.display = "none";
-                btn.style.display = "none";
-            }
+        // Toggle Description Overlay
+        function toggleDescription(card) {
+            // Close other open cards
+            document.querySelectorAll('.bot-card').forEach(c => {
+                if (c !== card) c.classList.remove('active');
+            });
+
+            // Toggle active state on clicked card
+            card.classList.toggle('active');
         }
     </script>
 </head>
@@ -48,47 +46,61 @@
     <!-- Bot Section -->
     <div class="bot-section">
         <div class="bot-container">
-            <div class="bot-card" onclick="toggleDescription('desc1')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/tsundere-CEO.jpg" alt="Tsundere CEO">
+                <div class="bot-overlay">
+                    <p>Your boss is cold, ruthless, and impossible to please. The worst part? She's also your ex.</p>
+                </div>
                 <p class="bot-name">Tsundere CEO</p>
-                <p class="bot-desc" id="desc1">Your boss is cold, ruthless, and impossible to please. The worst part? She's also your ex.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/The-Tsundere-CEO'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/The-Tsundere-CEO'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc2')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/yandere-roommate.jpg" alt="Yandere Roommate">
+                <div class="bot-overlay">
+                    <p>Your new roommate is sweet, caring… and completely obsessed with you. Be careful.</p>
+                </div>
                 <p class="bot-name">Yandere Roommate</p>
-                <p class="bot-desc" id="desc2">Your new roommate is sweet, caring… and completely obsessed with you. Be careful.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/The-Yandere-Roommate'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/The-Yandere-Roommate'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc3')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/villainess-fiance.jpg" alt="Villainess Fiancé">
+                <div class="bot-overlay">
+                    <p>You were forced into an arranged marriage with the most feared noble in the kingdom. Can you survive?</p>
+                </div>
                 <p class="bot-name">Villainess Fiancé</p>
-                <p class="bot-desc" id="desc3">You were forced into an arranged marriage with the most feared noble in the kingdom. Can you survive?</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/Villainess-Fiance'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/Villainess-Fiance'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc4')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/vampires-bargain.jpg" alt="Vampire’s Bargain">
+                <div class="bot-overlay">
+                    <p>You saved a vampire’s life. Now, he owes you a debt… and vampires always repay what they owe.</p>
+                </div>
                 <p class="bot-name">Vampire’s Bargain</p>
-                <p class="bot-desc" id="desc4">You saved a vampire’s life. Now, he owes you a debt… and vampires always repay what they owe.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/Vampires-Bargain'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/Vampires-Bargain'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc5')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/tin-mom.jpg" alt="Her Mom Matched Me">
+                <div class="bot-overlay">
+                    <p>You swiped right… on HER MOM?! Now she has demands, and she’s not taking no for an answer.</p>
+                </div>
                 <p class="bot-name">Her Mom Matched Me</p>
-                <p class="bot-desc" id="desc5">You swiped right… on HER MOM?! Now she has demands, and she’s not taking no for an answer.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/Her-Mom-Matched-Me'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/Her-Mom-Matched-Me'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc6')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/movie.jpg" alt="The Price of Fame">
+                <div class="bot-overlay">
+                    <p>You’ve been auctioned off for charity to the most powerful woman in Hollywood. You belong to her now.</p>
+                </div>
                 <p class="bot-name">The Price of Fame</p>
-                <p class="bot-desc" id="desc6">You’ve been auctioned off for charity to the most powerful woman in Hollywood. You belong to her now.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/The-Price-Of-Fame'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/The-Price-Of-Fame'">Start Chat</button>
             </div>
-            <div class="bot-card" onclick="toggleDescription('desc7')">
+            <div class="bot-card" onclick="toggleDescription(this)">
                 <img src="images/ceo.jpg" alt="Your Ex, Your Boss">
+                <div class="bot-overlay">
+                    <p>Your ex? She’s not just back—she’s in charge. And she’s LOVING every second of making you suffer.</p>
+                </div>
                 <p class="bot-name">Your Ex, Your Boss</p>
-                <p class="bot-desc" id="desc7">Your ex? She’s not just back—she’s in charge. And she’s LOVING every second of making you suffer.</p>
-                <button class="cta-button" style="display:none;" onclick="window.location='https://poe.com/Your-Ex-Your-Boss'">Start Chat</button>
+                <button class="cta-button" onclick="window.location='https://poe.com/Your-Ex-Your-Boss'">Start Chat</button>
             </div>
         </div>
     </div>
