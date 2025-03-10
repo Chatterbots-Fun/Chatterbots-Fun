@@ -14,24 +14,34 @@
         body {
             font-family: 'Inter', sans-serif;
             text-align: center;
-            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
             color: #333;
             padding: 40px;
             margin: 0;
         }
 
-        /* Title Styling */
+        /* Title Section with Animation */
         h1 {
             font-family: 'Playfair Display', serif;
             color: #222;
             font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-10px);
+            animation: fadeIn 1s forwards;
         }
 
         p {
             font-size: 1.2rem;
             color: #666;
+            opacity: 0;
+            animation: fadeIn 1.2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Bot Grid */
@@ -44,9 +54,10 @@
             padding-top: 20px;
         }
 
-        /* Bot Card Styling */
+        /* Bot Card - Glassmorphism */
         .bot-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
@@ -55,14 +66,14 @@
         }
 
         .bot-card:hover {
-            transform: translateY(-5px) rotate(1deg);
+            transform: translateY(-5px);
             box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         /* Bot Images */
         img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
             transition: opacity 0.3s ease-in-out;
         }
 
@@ -77,6 +88,30 @@
             display: block;
             margin-top: 10px;
             font-size: 1.1rem;
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background-color: #e73370;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: #666;
         }
 
         /* Responsive Tweaks */
@@ -95,31 +130,40 @@
         <div class="bot-card" onclick="window.location='https://poe.com/The-Tsundere-CEO'">
             <img src="tsundere-CEO.jpg" alt="Tsundere CEO">
             <p class="bot-name">Tsundere CEO</p>
+            <button class="cta-button">Chat Now</button>
         </div>
         <div class="bot-card" onclick="window.location='https://poe.com/The-Yandere-Roommate'">
             <img src="yandere-roommate.jpg" alt="Yandere Roommate">
             <p class="bot-name">Yandere Roommate</p>
+            <button class="cta-button">Chat Now</button>
         </div>
         <div class="bot-card" onclick="window.location='https://poe.com/Villainess-Fiance'">
             <img src="villainess-fiance.jpg" alt="Villainess Fiancé">
             <p class="bot-name">Villainess Fiancé</p>
+            <button class="cta-button">Chat Now</button>
         </div>
         <div class="bot-card" onclick="window.location='https://poe.com/Vampires-Bargain'">
             <img src="vampires-bargain.jpg" alt="Vampire’s Bargain">
             <p class="bot-name">Vampire’s Bargain</p>
+            <button class="cta-button">Chat Now</button>
         </div>          
         <div class="bot-card" onclick="window.location='https://poe.com/Her-Mom-Matched-Me'">
             <img src="tin-mom.jpg" alt="Her Mom Matched Me">
             <p class="bot-name">Her Mom Matched Me</p>
+            <button class="cta-button">Chat Now</button>
         </div>
         <div class="bot-card" onclick="window.location='https://poe.com/The-Price-Of-Fame'">
             <img src="movie.jpg" alt="The Price of Fame">
             <p class="bot-name">The Price of Fame</p>
+            <button class="cta-button">Chat Now</button>
         </div>
         <div class="bot-card" onclick="window.location='https://poe.com/Your-Ex-Your-Boss'">
             <img src="ceo.jpg" alt="Your Ex, Your Boss">
             <p class="bot-name">Your Ex, Your Boss</p>        
+            <button class="cta-button">Chat Now</button>
         </div>
     </div>
+
+    <p class="footer">© 2024 Chatterbots Fun - Immersive AI RP</p>
 </body>
 </html>
