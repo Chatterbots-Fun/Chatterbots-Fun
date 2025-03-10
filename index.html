@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatterbots.Fun</title>
+    <title>Chatterbots Fun</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
+        /* Smooth Page Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Body Styling */
         body {
             font-family: 'Inter', sans-serif;
             text-align: center;
-            background-color: #f7f7f7;
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
             color: #333;
             padding: 40px;
             margin: 0;
         }
+
+        /* Title Styling */
         h1 {
+            font-family: 'Playfair Display', serif;
             color: #222;
-            font-size: 2.5rem;
-            font-weight: 600;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 10px;
         }
+
         p {
             font-size: 1.2rem;
             color: #666;
         }
+
+        /* Bot Grid */
         .bot-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -33,26 +43,34 @@
             margin: auto;
             padding-top: 20px;
         }
+
+        /* Bot Card Styling */
         .bot-card {
             background: white;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             cursor: pointer;
         }
+
         .bot-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px) rotate(1deg);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
         }
+
+        /* Bot Images */
         img {
             width: 100%;
             border-radius: 10px;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s ease-in-out;
         }
+
         .bot-card:hover img {
             opacity: 0.9;
         }
+
+        /* Bot Name Styling */
         .bot-name {
             font-weight: 600;
             color: #222;
@@ -60,10 +78,17 @@
             margin-top: 10px;
             font-size: 1.1rem;
         }
+
+        /* Responsive Tweaks */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            p { font-size: 1rem; }
+            .bot-container { padding-top: 10px; }
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to Chatterbots.Fun</h1>
+    <h1>Welcome to Chatterbots Fun</h1>
     <p>Explore immersive AI experiences—choose your story below.</p>
     
     <div class="bot-container">
