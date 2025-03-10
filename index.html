@@ -5,46 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatterbots Fun</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; background-color: #121212; color: white; }
-        h1 { color: #ff4081; }
-        .bot-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .bot-card { background: #222; padding: 15px; border-radius: 10px; width: 250px; text-align: center; box-shadow: 0px 0px 10px rgba(255, 64, 129, 0.5); }
-        img { width: 100%; border-radius: 10px; }
-        a { text-decoration: none; font-weight: bold; color: #ff4081; display: block; margin-top: 10px; }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #121212;
+            color: white;
+            padding: 40px;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 2.5rem;
+            text-shadow: 0px 0px 15px rgba(255, 64, 129, 0.7);
+        }
+        .bot-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .bot-card {
+            background: #222;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(255, 64, 129, 0.5);
+            transition: transform 0.2s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .bot-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 64, 129, 0.8);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            transition: opacity 0.3s;
+        }
+        .bot-card:hover img {
+            opacity: 0.9;
+        }
+        .bot-name {
+            font-weight: bold;
+            color: #ff4081;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to Chatterbots Fun</h1>
     <p>Choose a bot and start your adventure.</p>
+    
     <div class="bot-container">
-        <div class="bot-card">
+        <div class="bot-card" onclick="window.location='https://poe.com/The-Tsundere-CEO'">
             <img src="tsundere-CEO.jpg" alt="Tsundere CEO">
-            <p><a href="https://poe.com/The-Tsundere-CEO">Tsundere CEO</a></p>
+            <p class="bot-name">Tsundere CEO</p>
         </div>
-        <div class="bot-card">
+        <div class="bot-card" onclick="window.location='https://poe.com/The-Yandere-Roommate'">
             <img src="yandere-roommate.jpg" alt="Yandere Roommate">
-            <p><a href="https://poe.com/The-Yandere-Roommate">Yandere Roommate</a></p>
+            <p class="bot-name">Yandere Roommate</p>
         </div>
-        <div class="bot-card">
+        <div class="bot-card" onclick="window.location='https://poe.com/Villainess-Fiance'">
             <img src="villainess-fiance.jpg" alt="Villainess Fiancé">
-            <p><a href="https://poe.com/Villainess-Fiance">Villainess Fiancé</a></p>
+            <p class="bot-name">Villainess Fiancé</p>
         </div>
-        <div class="bot-card">
+        <div class="bot-card" onclick="window.location='https://poe.com/Vampires-Bargain'">
             <img src="vampires-bargain.jpg" alt="Vampire’s Bargain">
-            <p><a href="https://poe.com/Vampires-Bargain">Vampire’s Bargain</a></p>
+            <p class="bot-name">Vampire’s Bargain</p>
         </div>          
-      <div class="bot-card">
-        <img src="tin-mom.jpg" alt="Her Mom Matched Me">
-        <p><a href="https://poe.com/Her-Mom-Matched-Me">Her Mom Matched Me</a></p>
+        <div class="bot-card" onclick="window.location='https://poe.com/Her-Mom-Matched-Me'">
+            <img src="tin-mom.jpg" alt="Her Mom Matched Me">
+            <p class="bot-name">Her Mom Matched Me</p>
+        </div>
+        <div class="bot-card" onclick="window.location='https://poe.com/The-Price-Of-Fame'">
+            <img src="movie.jpg" alt="The Price of Fame">
+            <p class="bot-name">The Price of Fame</p>
+        </div>
+        <div class="bot-card" onclick="window.location='https://poe.com/Your-Ex-Your-Boss'">
+            <img src="ceo.jpg" alt="Your Ex, Your Boss">
+            <p class="bot-name">Your Ex, Your Boss</p>        
+        </div>
     </div>
-    <div class="bot-card">
-        <img src="movie.jpg" alt="The Price of Fame">
-        <p><a href="https://poe.com/The-Price-Of-Fame">The Price of Fame</a></p>
-    </div>
-    <div class="bot-card">
-        <img src="ceo.jpg" alt="Your Ex, Your Boss">
-        <p><a href="https://poe.com/Your-Ex-Your-Boss">Your Ex, Your Boss</a></p>        
-    </div>
-</div>
 </body>
 </html>
