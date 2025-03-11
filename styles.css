@@ -16,19 +16,29 @@ body {
     position: sticky;
     top: 0;
     background: rgba(30, 30, 30, 0.9);
-    padding: 25px 0; /* More space around the logo */
+    padding: 25px 0; /* More space for logo */
     z-index: 100;
     backdrop-filter: blur(10px);
 }
 
-/* Bigger Logo + Hover Effect */
+/* Bigger Logo + Fade-in Effect */
 .logo {
-    width: 220px; /* Increased from 180px */
-    transition: transform 0.3s ease-in-out;
+    width: 220px;
+    transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    animation: fadeInLogo 1s ease-in-out forwards;
 }
 
-.logo:hover {
-    transform: scale(1.05);
+/* Mobile - Slightly Larger for Visibility */
+@media (max-width: 768px) {
+    .logo {
+        width: 250px;
+    }
+}
+
+@keyframes fadeInLogo {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero Section */
@@ -44,8 +54,9 @@ body {
 .hero h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
+    font-weight: 800; /* Stronger impact */
     color: #f76c2f;
-    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 #typewriter {
     font-size: 1.2rem;
@@ -80,7 +91,7 @@ body {
 }
 .bot-card:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0px 10px 25px rgba(247, 108, 47, 0.5);
+    box-shadow: 0px 10px 25px rgba(247, 108, 47, 0.7);
 }
 
 /* Bot Image */
@@ -136,8 +147,8 @@ body {
 
 /* Bot Name */
 .bot-name {
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.3rem; /* Slightly larger */
     color: #f5f5f5;
     margin-top: 10px;
     position: relative;
@@ -152,15 +163,19 @@ body {
     padding: 12px 18px;
     border-radius: 8px;
     font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
     margin-top: 10px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    transition: background 0.3s ease-in-out, transform 0.15s ease-in-out;
     position: relative;
     z-index: 3;
 }
 .cta-button:hover {
     background: linear-gradient(90deg, #f76c2f, #ff6f42);
-    transform: scale(1.1);
+    transform: translateY(-2px); /* Small lift */
+}
+.cta-button:active {
+    transform: scale(0.95);
 }
 
 /* Footer */
